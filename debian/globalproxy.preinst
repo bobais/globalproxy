@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+
+set -e
+
+#debconf()
+#{
+    ## Source DebConf
+    #. /usr/share/debconf/confmodule
+    #
+    ## Prepare
+    #db_fset globalproxy/something seen false
+    #db_set globalproxy/something false
+    #
+    ## Fire
+    #db_input critical globalproxy/something
+    #db_go
+#}
+
+# This script can be called in the following ways:
+#
+# Before the package is newly installed:
+#       <new-preinst> install
+#
+# Before the package is newly installed, once was installed and has not been
+# purged (ie. there already is configuration for it):
+#       <new-preinst> install <old-version>
+#
+# Before the package is upgraded:
+#       <new-preinst> upgrade <old-version>
+#
+# If postrm fails during upgrade or fails on failed upgrade:
+#       <old-preinst> abort-upgrade <new-version>
+
+case "$1" in
+install)
+    ## Configure using DebConf
+    #debconf
+    ;;
+upgrade)
+    ## Configure using DebConf
+    #debconf
+    ;;
+abort-upgrade)
+    # Nop
+    ;;
+esac
+
+

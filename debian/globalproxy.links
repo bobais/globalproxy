@@ -1,0 +1,2 @@
+/www/nginx/sbin/nginx /www/globalproxy/bin/globalproxy
+

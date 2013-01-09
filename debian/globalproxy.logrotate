@@ -1,0 +1,13 @@
+/www/globalproxy/log/*log {
+    daily
+    rotate 99
+    maxage 7
+    dateext
+    compress
+    missingok
+    sharedscripts
+    postrotate
+         invoke-rc.d globalproxy logrotate
+    endscript
+}
+

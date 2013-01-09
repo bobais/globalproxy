@@ -1,0 +1,13 @@
+Source: globalproxy
+Section: globalproxy
+Priority: optional
+Maintainer: Robert Havelka <robert.havelka@firma.seznam.cz>
+Build-Depends: 
+Standards-Version: 3.7.2.2
+
+Package: globalproxy
+Architecture: all
+Section: globalproxy
+Depends: szn-nginx | nginx, psmisc
+Description: Package.
+
